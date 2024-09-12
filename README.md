@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Crypto Jaiyq - Cryptocurrency Tracker 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+Crypto Jaiyq is a cryptocurrency tracking web application that provides real-time information about various cryptocurrencies. It fetches live data from the CoinGecko API and displays it in an interactive and user-friendly interface. The project is designed as a Single Page Application (SPA) using React Router, enabling users to navigate between pages seamlessly while keeping the app responsive and efficient.
 
-In the project directory, you can run:
+This project demonstrates my ability to work with real-world APIs, manage state with React Context, and create dynamic, data-driven applications. By integrating a coin search functionality, interactive charts, and a currency switcher, the project showcases a wide range of skills essential for modern web development.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Real-Time Cryptocurrency Data**: Fetches real-time data on multiple cryptocurrencies using the CoinGecko API.
+- **Interactive Price Charts**: Displays historical price data for the past 10 days using React Google Charts.
+- **Currency Switching**: Allows users to switch between different currencies (USD, EUR, CNY) with React Context managing the global state.
+- **Coin Search Functionality**: Includes a search input field that filters and displays coins based on user input.
+- **Multiple Pages in a SPA**: Uses React Router for navigation between the homepage and individual coin details without page reloads.
+- **Responsive Design**: The app is fully responsive, utilizing CSS Grid, Flexbox, and media queries to ensure usability on various screen sizes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React (v18.3.1)**: The core JavaScript library used to build the application's UI.
+- **React Router DOM (v6.26.2)**: For managing client-side routing, enabling navigation between multiple pages without reloading the app.
+- **React Google Charts**: To render interactive, responsive charts displaying historical cryptocurrency price data.
+- **CoinGecko API**: The primary data source for real-time cryptocurrency information.
+- **React Context API**: To manage global state, particularly for currency switching, ensuring that different components of the app can share state easily.
+- **CSS Grid, Flexbox, Media Queries**: For responsive design and layout adjustments across different screen sizes.
+- **JavaScript (ES6+)**: Leveraging modern JavaScript features including hooks (`useState`, `useEffect`), array methods (`map`, `filter`), and async/await for API handling.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Key Components
 
-### `npm run build`
+### Coin.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This component handles the display of individual cryptocurrency details, including a name, symbol, and interactive price chart for the past 10 days. It fetches both real-time coin data and historical price data from the CoinGecko API. React hooks (`useState`, `useEffect`) are used to manage the fetched data, and React Context is leveraged for currency selection.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Home.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The homepage displays an overview of available cryptocurrencies, fetched from the CoinGecko API. It includes a search bar where users can filter coins dynamically, showing relevant results in real-time. A table layout displays the rank, price, 24-hour change, and market cap of each cryptocurrency, with links to individual coin details using React Router DOM.
 
-### `npm run eject`
+### CoinContext.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This file sets up React Context to handle global state management, particularly for storing the list of all cryptocurrencies and the selected currency. It ensures that currency switching and cryptocurrency data are available throughout the app.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Goals and Motivation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The primary motivation for this project was to practice with external APIs, organize and manage state across multiple components, and build a responsive, modern web application. The decision to fetch real-time data from multiple API endpoints instead of storing static data reflects industry practices, where up-to-date data is crucial for user experience. This project also showcases my ability to structure a web application using modular components and React Router for navigation, while still maintaining the SPA architecture.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Installation and Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run this project locally:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/amir-amirov/react-crypto-jaiyq.git
+   ```
+   
+2. Navigate to the project directory:
+   ```bash
+   cd react-crypto-jaiyq
+   ```
+   
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+   
+4. Run the development server:
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+The app should now be running at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Future Improvements
 
-### Analyzing the Bundle Size
+- Add more animations for a smoother UI experience.
+- Connect Back-end for storing user's information.
+- Add User Authentication functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Note
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- If you are about to clone and use this project, please get and add your own access key from CoinGecko API.

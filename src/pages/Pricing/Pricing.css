@@ -1,0 +1,122 @@
+.pricing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px 100px;
+    font-family: 'Arial', sans-serif;
+}
+  
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+  
+.pricing-options {
+    display: flex;
+    gap: 30px;
+    color: black;
+}
+  
+.pricing-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    width: 45%;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+    border: 3px solid rgba(74, 5, 225);
+    
+}
+  
+.pricing-card:hover {
+    transform: scale(1.05);
+}
+  
+.pricing-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+  
+.pricing-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+  
+.price {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+  
+.price span {
+    font-size: 1.2rem;
+    color: #888;
+}
+  
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+}
+  
+.btn {
+    background-color: #eaeaea;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.btn:hover {
+    background-color: #ddd;
+}
+  
+  /* Special highlighted plan */
+.highlighted {
+    border: 3px solid rgba(74, 5, 225, 0.75);
+    position: relative;
+}
+  
+.label {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(74, 5, 225);
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+  
+.highlighted-btn {
+    background-color: rgba(74, 5, 225);
+    color: white;
+}
+  
+.highlighted-btn:hover {
+    background-color: rgba(74, 5, 180);
+}
+  
+.disclaimer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+@media(max-width: 700px){
+    .pricing-options{
+        flex-direction: column;
+    }
+    .pricing-card{
+        width: 100%;
+    }
+    .pricing-page h1{
+        font-size: 30px;
+    }
+    .disclaimer{
+        width: 80%;
+    }
+}

@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from "./pages/Home/Home";
+import Coin from "./pages/Coin/Coin";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import SignUpForm from './pages/SignUpForm/SignUpForm';
+import Blog from './pages/Blog/Blog';
+import Pricing from './pages/Pricing/Pricing';
+import JaiyqCoin from './pages/JaiyqCoin/JaiyqCoin';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={ <Home /> }/>
+        <Route path="/coin/:coinId" element={ <Coin /> }/>
+        <Route path="/sign-up" element={ <SignUpForm />} />
+        <Route path="/blog" element={ <Blog /> } />
+        <Route path="/pricing" element={ <Pricing /> } />
+        <Route path="/jaiyq-coin" element={ <JaiyqCoin /> } />
+      </Routes>
+      <Footer />
     </div>
   );
 }
